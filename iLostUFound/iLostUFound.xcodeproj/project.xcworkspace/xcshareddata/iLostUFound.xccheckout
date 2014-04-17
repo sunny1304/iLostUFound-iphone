@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CA676E26-C44E-4E87-B215-53A0DCE342FC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iLostUFound</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B401302F-CCD7-4816-AF6A-477FEABD217E</key>
+		<string>ssh://github.com/sunny1304/iLostUFound-iphone.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iLostUFound/iLostUFound.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B401302F-CCD7-4816-AF6A-477FEABD217E</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/sunny1304/iLostUFound-iphone.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B401302F-CCD7-4816-AF6A-477FEABD217E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B401302F-CCD7-4816-AF6A-477FEABD217E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iLostUFound-iphone</string>
+		</dict>
+	</array>
+</dict>
+</plist>
