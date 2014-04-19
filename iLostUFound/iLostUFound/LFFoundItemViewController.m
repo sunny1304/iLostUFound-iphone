@@ -27,12 +27,40 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://ilostufound.herokuapp.com/found_items.json"]];
+    
+    [NSURLConnection connectionWithRequest:request delegate:self];
+    
+    request = nil;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+-(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    self.foundItems = [[NSMutableData alloc] init];
+}
+
+-(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    [self.foundItems appendData:data];
+    self.foundItemsArray = [[NSArray alloc] init];
+}
+
+-(void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    self.foundItemsArray = [NSJSONSerialization JSONObjectWithData:self.foundItems options:0 error:nil];
+    
+    NSLog(@"%d", [self.foundItemsArray count]);
+    connection = nil;
 }
 
 @end

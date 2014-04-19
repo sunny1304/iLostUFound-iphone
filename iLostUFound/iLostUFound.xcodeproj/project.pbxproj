@@ -141,12 +141,12 @@
 				0298938319022CA700DE97BC /* LFReportFoundItemViewController.m */,
 				02E5D89F190021890023DB71 /* LFViewController.h */,
 				02E5D8A0190021890023DB71 /* LFViewController.m */,
-				02E5D8A2190021890023DB71 /* Images.xcassets */,
-				02E5D891190021890023DB71 /* Supporting Files */,
 				0298937F190229BD00DE97BC /* LFReportLostItemViewController.h */,
 				02989380190229BD00DE97BC /* LFReportLostItemViewController.m */,
 				029893851902305100DE97BC /* LFLostItemViewController.h */,
 				029893861902305100DE97BC /* LFLostItemViewController.m */,
+				02E5D8A2190021890023DB71 /* Images.xcassets */,
+				02E5D891190021890023DB71 /* Supporting Files */,
 			);
 			path = iLostUFound;
 			sourceTree = "<group>";

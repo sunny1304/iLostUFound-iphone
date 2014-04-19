@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LFFoundItemViewController : UIViewController
+@interface LFFoundItemViewController : UIViewController<NSURLConnectionDataDelegate>
+
+@property(strong, nonatomic) NSMutableData* foundItems;
+@property(strong, nonatomic) NSArray* foundItemsArray;
 
 @end

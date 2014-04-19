@@ -75,7 +75,7 @@
             </objects>
             <point key="canvasLocation" x="513" y="-38"/>
         </scene>
-        <!--Found Item View Controller-->
+        <!--Found Item View Controller - Found Items-->
         <scene sceneID="sT2-hA-sft">
             <objects>
                 <viewController id="KYU-u0-P6d" customClass="LFFoundItemViewController" sceneMemberID="viewController">
@@ -86,15 +86,22 @@
                     <view key="view" contentMode="scaleToFill" id="g6K-Sh-ddU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="gwY-da-ANR">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="cXN-mV-jw1"/>
+                    <navigationItem key="navigationItem" title="Found Items" id="cXN-mV-jw1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RFV-Wr-z0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="994" y="-29"/>
         </scene>
-        <!--Lost Item View Controller-->
+        <!--Lost Item View Controller - Lost Iems-->
         <scene sceneID="K50-Zz-3ek">
             <objects>
                 <viewController id="hHT-jg-dnx" customClass="LFLostItemViewController" sceneMemberID="viewController">
@@ -105,15 +112,22 @@
                     <view key="view" contentMode="scaleToFill" id="JAV-rZ-6xJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Pru-fl-YzA">
+                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="EXK-fF-AYB"/>
+                    <navigationItem key="navigationItem" title="Lost Iems" id="EXK-fF-AYB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zpx-Nb-C3k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="513" y="-694"/>
         </scene>
-        <!--Report Lost Item View Controller-->
+        <!--Report Lost Item View Controller - Report Lost Item-->
         <scene sceneID="jgy-BS-ZOT">
             <objects>
                 <viewController id="Vwc-eg-CQd" customClass="LFReportLostItemViewController" sceneMemberID="viewController">
@@ -126,13 +140,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2vu-RI-whl"/>
+                    <navigationItem key="navigationItem" title="Report Lost Item" id="2vu-RI-whl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mjt-U8-pBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="165" y="-694"/>
         </scene>
-        <!--Report Found Item View Controller-->
+        <!--Report Found Item View Controller - Report Found Item-->
         <scene sceneID="6RV-wM-2EO">
             <objects>
                 <viewController id="bvT-ag-mfk" customClass="LFReportFoundItemViewController" sceneMemberID="viewController">
@@ -145,7 +159,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ShP-3x-TG1"/>
+                    <navigationItem key="navigationItem" title="Report Found Item" id="ShP-3x-TG1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKv-hk-lm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
