@@ -23,6 +23,9 @@
                                 <state key="normal" title="Lost Items">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="hHT-jg-dnx" kind="push" identifier="browseLostItems" id="s55-Or-TO5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpd-Jd-ZnZ">
                                 <rect key="frame" x="20" y="228" width="280" height="33"/>
@@ -31,6 +34,9 @@
                                 <state key="normal" title="Found Items">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="KYU-u0-P6d" kind="push" identifier="browseFoundItems" id="jEq-Sy-Fdv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfA-Jz-q4c">
                                 <rect key="frame" x="20" y="299" width="280" height="33"/>
@@ -51,7 +57,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bvT-ag-mfk" kind="push" identifier="reportFoundItem" id="eHL-4T-vSo"/>
+                                    <segue destination="bvT-ag-mfk" kind="push" identifier="reportFoundItem" id="Uec-8J-aCZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -67,7 +73,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="743" y="-28"/>
+            <point key="canvasLocation" x="513" y="-38"/>
+        </scene>
+        <!--Found Item View Controller-->
+        <scene sceneID="sT2-hA-sft">
+            <objects>
+                <viewController id="KYU-u0-P6d" customClass="LFFoundItemViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yvO-Ne-Usd"/>
+                        <viewControllerLayoutGuide type="bottom" id="mtt-Fc-pQg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g6K-Sh-ddU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cXN-mV-jw1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RFV-Wr-z0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="994" y="-29"/>
+        </scene>
+        <!--Lost Item View Controller-->
+        <scene sceneID="K50-Zz-3ek">
+            <objects>
+                <viewController id="hHT-jg-dnx" customClass="LFLostItemViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0bp-ka-gTI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rrm-90-4Yn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JAV-rZ-6xJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EXK-fF-AYB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zpx-Nb-C3k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="513" y="-694"/>
         </scene>
         <!--Report Lost Item View Controller-->
         <scene sceneID="jgy-BS-ZOT">
@@ -86,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mjt-U8-pBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1233" y="-400"/>
+            <point key="canvasLocation" x="165" y="-694"/>
         </scene>
         <!--Report Found Item View Controller-->
         <scene sceneID="6RV-wM-2EO">
@@ -105,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKv-hk-lm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1173" y="404"/>
+            <point key="canvasLocation" x="143" y="614"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hxT-5Z-hiS">
@@ -123,7 +167,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dvk-0K-cia" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="217" y="-28"/>
+            <point key="canvasLocation" x="155" y="-38"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
