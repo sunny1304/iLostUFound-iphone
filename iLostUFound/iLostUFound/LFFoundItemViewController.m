@@ -7,6 +7,7 @@
 //
 
 #import "LFFoundItemViewController.h"
+#import "LFSingleFoundItemViewController.h"
 
 @interface LFFoundItemViewController ()
 
@@ -16,23 +17,15 @@
 
 static NSString* cellIdentifier = @"foundItemCell";
 
-//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-//{
-//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-//    if (self) {
-//        // Custom initialization
-//    }
-//    return self;
-//}
-
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithStyle:style];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
     return self;
 }
+
 
 - (void)viewDidLoad
 {
@@ -52,6 +45,13 @@ static NSString* cellIdentifier = @"foundItemCell";
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath* indexPath = [self.tableView indexPathForSelectedRow];
+    LFSingleFoundItemViewController* singleitemController = (LFSingleFoundItemViewController*)segue.destinationViewController;
+    singleitemController.singleFoundItem = [self.foundItemsArray objectAtIndex:indexPath.row];
 }
 
 
