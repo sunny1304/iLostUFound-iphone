@@ -10,4 +10,9 @@
 
 @interface LFViewController : UIViewController
 
+@property(nonatomic, strong) IBOutlet UIButton*  lostItemButton;
+@property(nonatomic, strong) IBOutlet UIButton*  foundItemButton;
+@property(nonatomic, strong) IBOutlet UIButton*  reportLostItemButton;
+@property(nonatomic, strong) IBOutlet UIButton*  reportFoundItemButton;
+
 @end

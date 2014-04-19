@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02989381190229BD00DE97BC /* LFReportLostItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02989380190229BD00DE97BC /* LFReportLostItemViewController.m */; };
+		0298938419022CA700DE97BC /* LFReportFoundItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0298938319022CA700DE97BC /* LFReportFoundItemViewController.m */; };
 		02E5D88B190021890023DB71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E5D88A190021890023DB71 /* Foundation.framework */; };
 		02E5D88D190021890023DB71 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E5D88C190021890023DB71 /* CoreGraphics.framework */; };
 		02E5D88F190021890023DB71 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E5D88E190021890023DB71 /* UIKit.framework */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0298937F190229BD00DE97BC /* LFReportLostItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFReportLostItemViewController.h; sourceTree = "<group>"; };
+		02989380190229BD00DE97BC /* LFReportLostItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFReportLostItemViewController.m; sourceTree = "<group>"; };
+		0298938219022CA700DE97BC /* LFReportFoundItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFReportFoundItemViewController.h; sourceTree = "<group>"; };
+		0298938319022CA700DE97BC /* LFReportFoundItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFReportFoundItemViewController.m; sourceTree = "<group>"; };
 		02E5D887190021890023DB71 /* iLostUFound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLostUFound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02E5D88A190021890023DB71 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		02E5D88C190021890023DB71 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -123,10 +129,14 @@
 				02E5D899190021890023DB71 /* LFAppDelegate.h */,
 				02E5D89A190021890023DB71 /* LFAppDelegate.m */,
 				02E5D89C190021890023DB71 /* Main.storyboard */,
+				0298938219022CA700DE97BC /* LFReportFoundItemViewController.h */,
+				0298938319022CA700DE97BC /* LFReportFoundItemViewController.m */,
 				02E5D89F190021890023DB71 /* LFViewController.h */,
 				02E5D8A0190021890023DB71 /* LFViewController.m */,
 				02E5D8A2190021890023DB71 /* Images.xcassets */,
 				02E5D891190021890023DB71 /* Supporting Files */,
+				0298937F190229BD00DE97BC /* LFReportLostItemViewController.h */,
+				02989380190229BD00DE97BC /* LFReportLostItemViewController.m */,
 			);
 			path = iLostUFound;
 			sourceTree = "<group>";
@@ -258,8 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0298938419022CA700DE97BC /* LFReportFoundItemViewController.m in Sources */,
 				02E5D89B190021890023DB71 /* LFAppDelegate.m in Sources */,
 				02E5D897190021890023DB71 /* main.m in Sources */,
+				02989381190229BD00DE97BC /* LFReportLostItemViewController.m in Sources */,
 				02E5D8A1190021890023DB71 /* LFViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,6 +481,7 @@
 				02E5D8BB190021890023DB71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		02E5D8BC190021890023DB71 /* Build configuration list for PBXNativeTarget "iLostUFoundTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +490,7 @@
 				02E5D8BE190021890023DB71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
