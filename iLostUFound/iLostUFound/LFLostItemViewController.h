@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LFLostItemViewController : UIViewController<NSURLConnectionDataDelegate>
+@interface LFLostItemViewController : UIViewController<NSURLConnectionDataDelegate,UITableViewDelegate, UITableViewDataSource>
 
 @property(strong, nonatomic) NSMutableData* lostItems;
 @property(strong, nonatomic) NSArray* lostItemsArray;
+
+@property(strong, nonatomic) IBOutlet UITableView* tableView;
 
 @end

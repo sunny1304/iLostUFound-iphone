@@ -14,6 +14,8 @@
 
 @implementation LFLostItemViewController
 
+static NSString* cellIdentifier = @"LostItemCell";
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -33,6 +35,8 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://ilostufound.herokuapp.com/lost_items.json"]];
     
     [NSURLConnection connectionWithRequest:request delegate:self];
+    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
     
     request = nil;
     
@@ -57,12 +61,31 @@
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     self.lostItemsArray = [NSJSONSerialization JSONObjectWithData:self.lostItems options:0 error:nil];
+    [self.tableView reloadData];
     
     NSLog(@"%@", self.lostItemsArray);
     
     connection = nil;
+    self.lostItems = nil;
 }
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.lostItemsArray count];
+}
+
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    NSDictionary* lost_item  = [self.lostItemsArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = [lost_item valueForKey:@"lost_item"];
+    return cell;
+}
 
 
 @end

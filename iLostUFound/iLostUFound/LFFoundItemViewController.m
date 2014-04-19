@@ -14,9 +14,20 @@
 
 @implementation LFFoundItemViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+static NSString* cellIdentifier = @"foundItemCell";
+
+//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+//{
+//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+//    if (self) {
+//        // Custom initialization
+//    }
+//    return self;
+//}
+
+- (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
     }
@@ -32,7 +43,7 @@
     
     [NSURLConnection connectionWithRequest:request delegate:self];
     
-    request = nil;
+    //request = nil;
     
     
 }
@@ -58,9 +69,29 @@
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     self.foundItemsArray = [NSJSONSerialization JSONObjectWithData:self.foundItems options:0 error:nil];
-    
+    [self.tableView reloadData];
     NSLog(@"%d", [self.foundItemsArray count]);
     connection = nil;
+}
+
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSLog(@"%d", [self.foundItemsArray count]);
+    return [self.foundItemsArray count];
+}
+
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    NSDictionary* foundItem = [self.foundItemsArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = [foundItem valueForKey:@"email"];
+    return cell;
 }
 
 @end
