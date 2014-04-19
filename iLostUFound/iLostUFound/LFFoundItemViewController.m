@@ -43,7 +43,7 @@ static NSString* cellIdentifier = @"foundItemCell";
     
     [NSURLConnection connectionWithRequest:request delegate:self];
     
-    //request = nil;
+    request = nil;
     
     
 }
@@ -90,7 +90,7 @@ static NSString* cellIdentifier = @"foundItemCell";
 {
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     NSDictionary* foundItem = [self.foundItemsArray objectAtIndex:indexPath.row];
-    cell.textLabel.text = [foundItem valueForKey:@"email"];
+    cell.textLabel.text = [foundItem valueForKey:@"found_item"];
     return cell;
 }
 
