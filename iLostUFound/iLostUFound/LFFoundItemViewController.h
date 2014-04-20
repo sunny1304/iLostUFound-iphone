@@ -13,4 +13,6 @@
 @property(strong, nonatomic) NSMutableData* foundItems;
 @property(strong, nonatomic) NSArray* foundItemsArray;
 
+@property(strong, nonatomic) IBOutlet UIActivityIndicatorView* indicator;
+
 @end

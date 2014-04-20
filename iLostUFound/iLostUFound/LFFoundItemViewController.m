@@ -36,6 +36,10 @@ static NSString* cellIdentifier = @"foundItemCell";
     
     [NSURLConnection connectionWithRequest:request delegate:self];
     
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
+    [self.indicator startAnimating];
+    
     request = nil;
     
     
@@ -71,6 +75,9 @@ static NSString* cellIdentifier = @"foundItemCell";
     self.foundItemsArray = [NSJSONSerialization JSONObjectWithData:self.foundItems options:0 error:nil];
     [self.tableView reloadData];
     NSLog(@"%d", [self.foundItemsArray count]);
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = FALSE;
+    [self.indicator stopAnimating];
     connection = nil;
 }
 
